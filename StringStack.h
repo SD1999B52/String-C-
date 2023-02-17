@@ -8,7 +8,7 @@ class StringStack {
 		StringStack();
 		~StringStack();
 		int getSize();
-		void push( const String & string );
+		void push(const String & string);
 		void show();
 		void out();
 	private:
