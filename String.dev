@@ -1,9 +1,9 @@
 [Project]
 FileName=String.dev
 Name=Проект1
-UnitCount=3
+UnitCount=5
 Type=1
-Ver=1
+Ver=2
 ObjFiles=
 Includes=
 Libs=
@@ -27,7 +27,9 @@ CustomMakefile=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=
+CompilerSettings=0000000000000000000000000
+LogOutput=
+LogOutputEnabled=0
 
 [Unit1]
 FileName=main.cpp
@@ -56,6 +58,7 @@ OriginalFilename=
 ProductName=
 ProductVersion=
 AutoIncBuildNr=0
+SyncProduct=0
 
 [Unit2]
 FileName=String.h
@@ -71,6 +74,26 @@ BuildCmd=
 FileName=String.cpp
 CompileCpp=1
 Folder=Проект1
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=StringStack.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=StringStack.h
+CompileCpp=1
+Folder=
 Compile=1
 Link=1
 Priority=1000
