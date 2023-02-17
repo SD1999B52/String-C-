@@ -1,69 +1,67 @@
 #include "String.h"
 
-//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ A
+//конструктор А
 String::String() {
 	string = new char[1];
 	
 	string[0] = '\0';
 }
 
-//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ B
-String::String( const char string[] ) {
+//конструктор B
+String::String(const char string[]) {
 	int length = 0;
 	
-	while ( string[length] != '\0' ) {
+	while (string[length] != '\0') {
         length++;
     }
     
     this->string = new char[length];
     
-    for ( int i = 0; i < length; i++ ) {
+    for (int i = 0; i < length; i++) {
     	this->string[i] = string[i];
 	}
 }
 
-//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
-String::String( const String & string ) {
+//конструктор копирования
+String::String(const String & string) {
 	int length = string.getLength();
 	
 	this->string = new char[length];
 	
-	for ( int i = 0; i < length; i++ ) {
+	for (int i = 0; i < length; i++) {
 		this->string[i] = string.string[i];
 	}
 }
 
-//РґРµСЃС‚СЂСѓРєС‚РѕСЂ
+//деструктор
 String::~String() {
-	delete[] this->string;
-	
-	printf( "%s\n", "String destructor" );
+	delete[] string;
 }
 
-//РїРѕР»СѓС‡РёС‚СЊ РґР»РёРЅРЅСѓ СЃС‚СЂРѕРєРё
+//получить длинну строки
 int String::getLength() const {
 	int length = 0;
 	
-	while ( string[length] != '\0' ) {
+	while (string[length] != '\0') {
 		length++;
 	}
 	
 	return length;
 }
 
-//РїРѕР»СѓС‡РёС‚СЊ СЃРёРјРІРѕР» СЃС‚СЂРѕРєРё
-char String::getChar( const int index ) {
+//получить сомвол из строки
+char String::getChar(const int index) {
 	return string[index];
 }
 
-//СЃСЂР°РІРЅРёС‚СЊ СЃС‚СЂРѕРєРё
-bool String::equals( const String & string ) {
+//сравнить строки
+bool String::equals(const String & string) {
 	int stringALength = string.getLength();
 	int stringBLength = getLength();
 	
-	if ( stringALength == stringBLength ) {
-		for ( int i = 0; i < stringALength; i++ ) {
-			if ( this->string[ i ] != string.string[ i ] ) {
+	if (stringALength == stringBLength) {
+		for (int i = 0; i < stringALength; i++) {
+			if (this->string[i] != string.string[i]) {
 				return false;
 			}
 		}
@@ -74,58 +72,58 @@ bool String::equals( const String & string ) {
 	return false;
 }
 
-//Р·Р°РґР°С‚СЊ С‚РµРєСЃС‚
-void String::setText( const char string[] ) {
+//задать текст
+void String::setText(const char string[]) {
 	delete[] this->string;
 	
 	int length = 0;
 	
-	while ( string[length] != '\0' ) {
+	while (string[length] != '\0') {
 		length++;
 	}
     
     this->string = new char[length];
     
-    for ( int i = 0; i < length; i++ ) {
+    for (int i = 0; i < length; i++) {
     	this->string[i] = string[i];
 	}
 }
 
-//РІС‹РІРѕРґ С‚РµРєСЃС‚Р°
+//вывод текста
 void String::outText() {
-	for ( int i = 0; i < getLength(); i++ ) {
-		printf( "%c", string[i] );
+	for (int i = 0; i < getLength(); i++) {
+		printf("%c", string[i]);
 	}
 	
-	printf( "\n" );
+	printf("\n");
 }
 
-//РѕРїРµСЂР°С†РёСЏ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
-void String::operator =( const String & string ) {
+//операция присваивания
+void String::operator = (const String & string) {
 	delete[] this->string;
 	
 	int length = string.getLength();
     
     this->string = new char[length];
     
-    for ( int i = 0; i < length; i++ ) {
+    for (int i = 0; i < length; i++) {
     	this->string[i] = string.string[i];
 	}
 }
 
-//РѕРїРµСЂР°С†РёСЏ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
-void String::operator =( const char string[] ) {
+//операция присваивания
+void String::operator = (const char string[]) {
 	delete[] this->string;
 	
 	int length = 0;
 	
-	while ( string[length] != '\0' ) {
+	while (string[length] != '\0') {
 		length++;
 	}
     
     this->string = new char[length];
     
-    for ( int i = 0; i < length; i++ ) {
+    for (int i = 0; i < length; i++) {
     	this->string[i] = string[i];
 	}
 }
