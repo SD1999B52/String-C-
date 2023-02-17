@@ -1,10 +1,11 @@
-#include <cstdlib>
 #include <iostream>
+//#include "String.h"
+//#include "StringStack.h"
 
 using namespace std;
 
-int main(int argc, char *argv[]) {
-    system("PAUSE");
+int main(int argc, char **argv) {
+    system("pause");
     
-    return EXIT_SUCCESS;
+    return 0;
 }
