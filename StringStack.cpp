@@ -8,20 +8,18 @@ StringStack::StringStack() {
 
 StringStack::~StringStack() {
 	delete [] stack;
-	
-	printf( "%s\n", "StringStack destructor" );
 }
 
-//РїРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ СЃС‚РµРєРµ
+//получить количество элементов в стеке
 int StringStack::getSize() {
 	return size;
 }
 
-//РґРѕР±Р°РІРёС‚СЊ СЌР»РµРјРµРЅС‚ РІ СЃС‚РµРє
-void StringStack::push( const String & string ) {
+//добавить элемент в стек
+void StringStack::push(const String & string) {
 	String *buffer = new String[size + 1];
 	
-	for ( int i = 0; i < size; i++ ) {
+	for (int i = 0; i < size; i++) {
 		buffer[i] = stack[i];
 	}
 	
@@ -33,16 +31,16 @@ void StringStack::push( const String & string ) {
 	
 	stack = new String[size];
 	
-	for ( int i = 0; i < size; i++ ) {
+	for (int i = 0; i < size; i++) {
 		stack[i] = buffer[i];
 	}
 	
 	delete [] buffer;
 }
 
-//РІС‹РІРѕРґ СЃС‚СЂРѕРє
+//вывод строк
 void StringStack::out() {
-	for ( int i = 0; i < size; i++ ) {
+	for (int i = 0; i < size; i++) {
 		stack[i].outText();
 	}
 }
