@@ -5,9 +5,12 @@
 using namespace std;
 
 int main(int argc, char **argv) {
-    String wordA("Hello\0");
-	String wordB(" world\0");
+    String wordA("Hello");
+	String wordB(" world");
 	String wordC();
+	
+	wordA.outText();
+	wordB.outText();
 	
 	wordB = "world";
 	

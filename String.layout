@@ -4,11 +4,11 @@
 Order=2,1,3,4,0
 Focused=0
 [Editor_0]
-CursorCol=24
+CursorCol=18
 =======
 Order=3,4
 Focused=4
-CursorRow=9
+CursorRow=13
 TopLine=1
 LeftChar=1
 Open=0
@@ -59,8 +59,8 @@ LeftChar=1
 Open=0
 Top=0
 [Editor_3]
-CursorCol=27
-CursorRow=32
+CursorCol=14
+CursorRow=15
 TopLine=1
 LeftChar=1
 Open=0
