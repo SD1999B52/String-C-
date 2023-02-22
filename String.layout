@@ -8,6 +8,11 @@ CursorCol=2
 =======
 Order=3,4
 Focused=4
+CursorRow=18
+TopLine=1
+LeftChar=1
+Open=0
+Top=0
 [Editor_0]
 CursorCol=1
 >>>>>>> 5860f58105cf2339b978bdbf1c5227de9176d9b9
@@ -51,7 +56,7 @@ CursorRow=131
 TopLine=94
 >>>>>>> 7b94a93c5ce8245ebcb449f7ca999924f48b4761
 LeftChar=1
-Open=1
+Open=0
 Top=0
 [Editor_3]
 CursorCol=27
