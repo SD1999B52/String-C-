@@ -24,7 +24,7 @@ String::String(const char string[]) {
 
 //конструктор копирования
 String::String(const String & string) {
-	int length = string.getLength();
+	int length = string.getLength() + 1;
 	
 	this->string = new char[length];
 	
@@ -102,7 +102,7 @@ void String::outText() {
 void String::operator = (const String & string) {
 	delete[] this->string;
 	
-	int length = string.getLength();
+	int length = string.getLength() + 1;
     
     this->string = new char[length];
     
