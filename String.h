@@ -1,9 +1,9 @@
 #ifndef STRING_H
 #define STRING_H
 
-#include <stdio.h>
-#include <iostream>
-#include <cstdlib>
+//#include <stdio.h>
+//#include <iostream>
+//#include <cstdlib>
 
 class String {
 	public:
