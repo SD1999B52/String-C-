@@ -5,8 +5,8 @@
 using namespace std;
 
 int main(int argc, char **argv) {
-    String wordA("Hello");
-	String wordB(" world");
+    String wordA("Hello\0");
+	String wordB(" world\0");
 	String wordC();
 	
 	wordB = "world";
